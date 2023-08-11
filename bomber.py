@@ -6,7 +6,7 @@ import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-local_sms_path = "sms.py"  # Provide the local path to the sms.py file
+local_sms_path = "sms2.py"  # Provide the local path to the sms.py file
 
 # Read 'sms.py' content from a local path
 with open(local_sms_path, "r", encoding="utf-8") as f:
@@ -19,7 +19,7 @@ if read == r:
 else:
     print(Fore.RED + "Güncelleme yapılıyor...")
     # Update local 'sms.py' content if needed
-    with open("sms.py", "w", encoding="utf-8") as f:
+    with open("sms2.py", "w", encoding="utf-8") as f:
         f.write(r)
 
 from sms import SendSms
